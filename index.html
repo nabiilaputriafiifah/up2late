@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!-- up2late | UTS Pemrograman Web Dasar | Nabiila (A12.2025.07361) -->
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>up2late - one more scroll. one less hour.</title>
+  <meta name="description" content="Kenali kebiasaan malam yang mencuri tidurmu, hitung jam tidur ideal, dan mulai rutinitas detox malam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-night">
+      <div class="container">
+        <a class="navbar-brand logo" href="#hero">up<span>2</span>late</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Buka menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#pencuri">Pencuri tidur</a></li>
+            <li class="nav-item"><a class="nav-link" href="#dampak">Dampak</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kuis">Kuis</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kalkulator">Kalkulator</a></li>
+            <li class="nav-item"><a class="nav-link" href="#detox">Detox</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero d-flex align-items-center">
+      <div class="moon" aria-hidden="true"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-lg-8">
+            <p class="hero-clock" aria-live="off"><span id="clock">--:--</span> <span id="greeting">halo</span></p>
+            <h1 class="hero-title">one more <span class="swap" id="swap">scroll</span>.<br>one less hour.</h1>
+            <p class="hero-sub">Scroll, maraton nonton, kopi sore, makan larut, dan begadang kerja atau belajar diam-diam memotong jam tidurmu. Cari tahu mana yang paling mencuri, lalu atur ulang malammu.</p>
+            <p class="oopsie" id="oopsie" hidden>oopsie, there goes your bedtime.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#kalkulator" class="btn btn-moon btn-lg">Hitung jam tidurku</a>
+              <a href="#kuis" class="btn btn-ghost btn-lg">Cek pencuri tidurku</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pencuri" class="py-6">
+      <div class="container">
+        <h2>Pencuri tidur</h2>
+        <p class="text-soft section-lead">Lima kebiasaan malam yang paling sering memotong jam tidur, siapa pun kamu. Baca penjelasan scroll di bawah, lalu klik kartu lainnya untuk melihat penjelasan dan batas amannya.</p>
+
+        <div class="row g-3">
+          <div class="col-12">
+            <article class="steal steal-main">
+              <div class="steal-head">
+                <span class="steal-icon" aria-hidden="true">📱</span>
+                <span><strong>Scroll dan doomscroll</strong><small>Pencuri tidur nomor satu</small></span>
+              </div>
+              <div class="steal-detail">
+                <p><strong>Doomscrolling</strong> berarti terus menggulir konten, terutama yang negatif atau bikin cemas, padahal badan sudah capek. Feed tidak pernah memberi titik berhenti, jadi otak tetap waspada.</p>
+                <p><strong>Revenge bedtime procrastination</strong> adalah menunda tidur demi merebut kembali waktu pribadi yang hilang di siang hari. Hasilnya satu siklus: capek, scroll, tidur telat, bangun capek, lalu scroll lagi.</p>
+                <p class="limit">Batas aman: berhenti 30 sampai 60 menit sebelum tidur.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <button type="button" class="steal-card" data-bs-toggle="modal" data-bs-target="#stealModal" data-title="Maraton nonton dan gaming" data-icon="🎮">
+              <span class="steal-icon" aria-hidden="true">🎮</span>
+              <span class="steal-title">Maraton nonton dan gaming</span>
+              <span class="steal-more">Lihat detail</span>
+            </button>
+            <div class="steal-detail" hidden>
+              <p>&quot;Satu episode lagi&quot; dan &quot;satu match lagi&quot; jarang berhenti di satu. Stimulasinya tinggi, jadi otak sulit turun ke mode tidur.</p>
+              <p class="limit">Batas aman: berhenti sekitar 1 jam sebelum tidur.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <button type="button" class="steal-card" data-bs-toggle="modal" data-bs-target="#stealModal" data-title="Kafein sore dan malam" data-icon="☕">
+              <span class="steal-icon" aria-hidden="true">☕</span>
+              <span class="steal-title">Kafein sore dan malam</span>
+              <span class="steal-more">Lihat detail</span>
+            </button>
+            <div class="steal-detail" hidden>
+              <p>Kopi, boba, teh, dan minuman energi bertahan di tubuh berjam-jam. Kamu bisa tetap ketiduran, tapi kualitas tidurnya turun.</p>
+              <p class="limit">Batas aman: berhenti sekitar 6 sampai 8 jam sebelum tidur.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <button type="button" class="steal-card" data-bs-toggle="modal" data-bs-target="#stealModal" data-title="Makan berat dan ngemil larut" data-icon="🍜">
+              <span class="steal-icon" aria-hidden="true">🍜</span>
+              <span class="steal-title">Makan berat dan ngemil larut</span>
+              <span class="steal-more">Lihat detail</span>
+            </button>
+            <div class="steal-detail" hidden>
+              <p>Pencernaan masih bekerja saat kamu berbaring, jadi badan terasa tidak nyaman dan tidur lebih gelisah.</p>
+              <p class="limit">Batas aman: berhenti sekitar 2 sampai 3 jam sebelum tidur.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <button type="button" class="steal-card" data-bs-toggle="modal" data-bs-target="#stealModal" data-title="Begadang kerja atau belajar" data-icon="📚">
+              <span class="steal-icon" aria-hidden="true">📚</span>
+              <span class="steal-title">Begadang kerja atau belajar</span>
+              <span class="steal-more">Lihat detail</span>
+            </button>
+            <div class="steal-detail" hidden>
+              <p>Otak yang baru selesai berpikir keras tidak bisa langsung dimatikan. Tugas atau kerjaan selesai, tapi pikiran masih berputar.</p>
+              <p class="limit">Batas aman: berhenti sekitar 1 jam sebelum tidur.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cost mt-5">
+          <h3>Berapa jam setahun yang hilang karena scroll malam?</h3>
+          <label for="scrollMinutes" class="form-label text-soft">Rata-rata menit scroll setelah "mau tidur" per malam</label>
+          <div class="d-flex flex-wrap gap-2 justify-content-center align-items-start">
+            <input type="number" class="form-control cost-input" id="scrollMinutes" min="0" max="600" placeholder="contoh: 90" inputmode="numeric">
+            <button type="button" class="btn btn-moon" id="costBtn">Hitung</button>
+          </div>
+          <p class="cost-result mt-3" id="costResult" aria-live="polite">Isi menitnya, lalu klik Hitung.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dampak" class="py-6 alt">
+      <div class="container">
+        <h2>Dampak ke tidurmu</h2>
+        <p class="text-soft section-lead">Tidur bukan satu blok panjang. Tubuh melewati siklus berulang, dan kurang tidur memotong siklus itu.</p>
+
+        <h3 class="h5 mt-4">Satu siklus tidur kira-kira 90 menit</h3>
+        <div class="cycle" role="img" aria-label="Satu siklus tidur: tidur ringan, tidur dalam, REM, lalu tidur ringan lagi">
+          <div class="cycle-bar" style="flex:2">Tidur ringan</div>
+          <div class="cycle-bar" style="flex:3">Tidur dalam</div>
+          <div class="cycle-bar" style="flex:2">REM</div>
+          <div class="cycle-bar" style="flex:1">Ringan</div>
+        </div>
+        <p class="text-soft mt-2">Bangun di tengah tidur dalam bikin badan terasa berat dan pusing. Itu sebabnya kalkulator di bawah menghitung jam tidur dalam kelipatan siklus.</p>
+
+        <div class="row g-4 mt-2">
+          <div class="col-md-4"><h3 class="h5">Fokus menurun</h3><p class="text-soft">Susah fokus menyimak pelajaran atau pekerjaan, dan gampang melamun.</p></div>
+          <div class="col-md-4"><h3 class="h5">Mood naik-turun</h3><p class="text-soft">Lebih mudah kesal, cemas, atau murung tanpa sebab jelas.</p></div>
+          <div class="col-md-4"><h3 class="h5">Ingatan lemah</h3><p class="text-soft">Otak merapikan memori saat tidur, jadi apa yang kamu pelajari seharian lebih sulit menempel kalau tidurmu kurang.</p></div>
+        </div>
+
+        <h3 class="h5 mt-5 mb-3">Mitos atau fakta?</h3>
+        <div class="accordion accordion-night" id="mitos">
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m1" aria-expanded="false" aria-controls="m1">"Tidur 4 jam cukup kalau sudah terbiasa"</button></h4>
+            <div id="m1" class="accordion-collapse collapse" data-bs-parent="#mitos"><div class="accordion-body">Mitos. Terbiasa merasa baik-baik saja tidak sama dengan tubuh benar-benar pulih. Performa dan mood tetap bisa turun tanpa kamu sadari.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m2" aria-expanded="false" aria-controls="m2">"Kopi nggak ngaruh ke aku"</button></h4>
+            <div id="m2" class="accordion-collapse collapse" data-bs-parent="#mitos"><div class="accordion-body">Sering keliru. Kamu mungkin tetap bisa ketiduran, tapi kualitas tidurnya bisa turun. Efeknya tidak selalu terasa.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m3" aria-expanded="false" aria-controls="m3">"Scroll malam itu cara santai"</button></h4>
+            <div id="m3" class="accordion-collapse collapse" data-bs-parent="#mitos"><div class="accordion-body">Terasa santai, tapi otak tetap menerima rangsangan baru terus-menerus. Itu bukan istirahat yang sebenarnya.</div></div>
+          </div>
+          <div class="accordion-item">
+            <h4 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#m4" aria-expanded="false" aria-controls="m4">"Tidur lama di akhir pekan menebus semuanya"</button></h4>
+            <div id="m4" class="accordion-collapse collapse" data-bs-parent="#mitos"><div class="accordion-body">Hanya sebagian. Jam tidur yang berubah-ubah juga mengacaukan ritme tubuh, jadi Senin terasa lebih berat.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kuis" class="py-6">
+      <div class="container">
+        <h2>Apa pencuri tidur terbesarmu?</h2>
+        <p class="text-soft section-lead">Delapan pertanyaan singkat tentang kebiasaan malammu. Tidak ada jawaban benar atau salah, dan hasilnya langsung terhubung ke kalkulator di bawah.</p>
+
+        <div class="quiz">
+          <div id="quizStart" class="text-center">
+            <p class="text-soft">8 pertanyaan, sekitar 1 menit.</p>
+            <button type="button" class="btn btn-moon btn-lg" id="quizStartBtn">Mulai kuis</button>
+          </div>
+
+          <div id="quizQuestion" hidden>
+            <p class="text-soft small mb-0" id="quizCounter"></p>
+            <div class="progress quiz-progress" role="progressbar" aria-label="Kemajuan kuis" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="quizProgress">
+              <div class="progress-bar" id="quizBar"></div>
+            </div>
+            <h3 class="quiz-q" id="quizText">Pertanyaan</h3>
+            <div class="quiz-options" id="quizOptions"></div>
+            <button type="button" class="btn btn-ghost btn-sm mt-3" id="quizBack">Sebelumnya</button>
+          </div>
+
+          <div id="quizResult" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kalkulator" class="py-6 alt">
+      <div class="container">
+        <h2>Sleep calculator</h2>
+        <p class="text-soft section-lead">Tubuh tidur dalam siklus sekitar 90 menit, dan butuh sekitar 15 menit untuk terlelap. Pilih salah satu mode, lalu lihat jadwal malammu mundur dari jam tidur.</p>
+
+        <div class="calc">
+          <ul class="nav nav-pills calc-tabs nav-fill" role="tablist">
+            <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-bangun-btn" data-bs-toggle="pill" data-bs-target="#tab-bangun" type="button" role="tab" aria-controls="tab-bangun" aria-selected="true">Aku harus bangun jam…</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab-tidur-btn" data-bs-toggle="pill" data-bs-target="#tab-tidur" type="button" role="tab" aria-controls="tab-tidur" aria-selected="false">Aku mau tidur jam…</button></li>
+          </ul>
+
+          <div class="tab-content mt-4">
+            <div class="tab-pane fade show active" id="tab-bangun" role="tabpanel" aria-labelledby="tab-bangun-btn">
+              <label for="wakeTime" class="form-label text-soft">Jam bangun</label>
+              <div class="d-flex flex-wrap gap-2">
+                <input type="time" class="form-control time-input" id="wakeTime">
+                <button type="button" class="btn btn-moon" id="wakeBtn">Hitung jam tidur</button>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tab-tidur" role="tabpanel" aria-labelledby="tab-tidur-btn">
+              <label for="bedTime" class="form-label text-soft">Jam tidur</label>
+              <div class="d-flex flex-wrap gap-2">
+                <input type="time" class="form-control time-input" id="bedTime">
+                <button type="button" class="btn btn-moon" id="bedBtn">Hitung jam bangun</button>
+                <button type="button" class="btn btn-ghost" id="nowBtn">Tidur sekarang</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="calc-msg" id="calcMsg" aria-live="polite"></p>
+          <p class="calc-note" id="calcNote" aria-live="polite" hidden></p>
+
+          <div id="calcResult" hidden>
+            <h3 class="h6 text-soft" id="calcResultTitle">Pilihan jam</h3>
+            <div class="row g-2" id="calcOptions"></div>
+          </div>
+
+          <div id="countdown" class="mt-4" hidden>
+            <div class="d-flex flex-wrap justify-content-between align-items-end gap-2">
+              <div>
+                <h3 class="h5 mb-0">Countdown malam</h3>
+                <p class="text-soft mb-0" id="countdownSub"></p>
+              </div>
+              <div>
+                <label for="bufferSelect" class="form-label text-soft mb-1">Stop scroll sebelum tidur</label>
+                <select class="form-select time-input" id="bufferSelect" data-bs-theme="dark">
+                  <option value="30">30 menit</option>
+                  <option value="45" selected>45 menit</option>
+                  <option value="60">60 menit</option>
+                </select>
+              </div>
+            </div>
+            <ul class="timeline mt-3" id="timeline"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="detox" class="py-6">
+      <div class="container">
+        <h2>Rencana detox malam</h2>
+        <p class="text-soft section-lead">Centang langkah yang sudah kamu lakukan malam ini. Kelompok yang cocok dengan pencuri tidur terbesarmu dari kuis akan diberi tanda prioritas.</p>
+
+        <div class="detox-progress">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <strong id="detoxCount">0 dari 8 langkah</strong>
+            <button type="button" class="btn btn-ghost btn-sm" id="detoxReset">Reset checklist</button>
+          </div>
+          <div class="detox-track" role="progressbar" aria-label="Kemajuan rencana detox" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="detoxProgress">
+            <div class="detox-fill" id="detoxFill"></div>
+          </div>
+          <p class="detox-msg" id="detoxMsg" aria-live="polite">Mulai dari satu langkah kecil, lalu lanjut.</p>
+        </div>
+
+        <div class="row g-3 mt-1">
+          <div class="col-md-6">
+            <div class="detox-group" data-cat="scroll">
+              <h3 class="detox-title"><span aria-hidden="true">📱</span> Scroll dan doomscroll <span class="priority-tag" hidden>Prioritasmu</span></h3>
+              <ul class="detox-list">
+              <li><input type="checkbox" class="detox-check" id="dx-scroll-1"><label for="dx-scroll-1">Taruh HP jauh dari kasur dan pakai alarm biasa</label></li>
+              <li><input type="checkbox" class="detox-check" id="dx-scroll-2"><label for="dx-scroll-2">Aktifkan mode jangan ganggu dan tutup aplikasi sosmed</label></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detox-group" data-cat="nonton">
+              <h3 class="detox-title"><span aria-hidden="true">🎮</span> Maraton nonton dan gaming <span class="priority-tag" hidden>Prioritasmu</span></h3>
+              <ul class="detox-list">
+              <li><input type="checkbox" class="detox-check" id="dx-nonton-1"><label for="dx-nonton-1">Matikan autoplay dan tentukan batas episode atau match malam ini</label></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detox-group" data-cat="kafein">
+              <h3 class="detox-title"><span aria-hidden="true">☕</span> Kafein sore dan malam <span class="priority-tag" hidden>Prioritasmu</span></h3>
+              <ul class="detox-list">
+              <li><input type="checkbox" class="detox-check" id="dx-kafein-1"><label for="dx-kafein-1">Kopi, teh, dan boba terakhir selesai sebelum siang berakhir, atau 6 jam sebelum tidur</label></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detox-group" data-cat="makan">
+              <h3 class="detox-title"><span aria-hidden="true">🍜</span> Makan berat dan ngemil larut <span class="priority-tag" hidden>Prioritasmu</span></h3>
+              <ul class="detox-list">
+              <li><input type="checkbox" class="detox-check" id="dx-makan-1"><label for="dx-makan-1">Selesaikan makan berat 2 sampai 3 jam sebelum tidur</label></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detox-group" data-cat="nugas">
+              <h3 class="detox-title"><span aria-hidden="true">📚</span> Begadang kerja atau belajar <span class="priority-tag" hidden>Prioritasmu</span></h3>
+              <ul class="detox-list">
+              <li><input type="checkbox" class="detox-check" id="dx-nugas-1"><label for="dx-nugas-1">Tutup laptop, buku, atau kerjaan, beri jeda 1 jam tanpa layar sebelum tidur</label></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detox-group" data-cat="bonus">
+              <h3 class="detox-title"><span aria-hidden="true">🌙</span> Penutup malam </h3>
+              <ul class="detox-list">
+              <li><input type="checkbox" class="detox-check" id="dx-bonus-1"><label for="dx-bonus-1">Tulis isi kepala dan daftar besok di kertas supaya tidak overthinking di kasur</label></li>
+              <li><input type="checkbox" class="detox-check" id="dx-bonus-2"><label for="dx-bonus-2">Redupkan lampu kamar dan siapkan baju atau tas untuk besok</label></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer py-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <span class="logo">up<span>2</span>late</span>
+      <small class="text-soft">Dibuat oleh Nabiila · A12.2025.07361 · UTS Pemrograman Web Dasar</small>
+      <a href="#hero" class="text-soft">Kembali ke atas</a>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="stealModal" tabindex="-1" aria-labelledby="stealModalTitle">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-night">
+        <div class="modal-header">
+          <h3 class="modal-title h5" id="stealModalTitle"><span id="stealModalIcon" aria-hidden="true"></span> <span id="stealModalName">Detail</span></h3>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body" id="stealModalBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
